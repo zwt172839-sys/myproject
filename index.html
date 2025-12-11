@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSDN个人主页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 可选：引入字体图标（模拟CSDN图标） -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/csdn-logo.png" alt="CSDN图标">
+                <span>CSDN</span>
+            </div>
+            <div class="nav-right">
+                <a href="#" class="nav-link">首页</a>
+                <a href="#" class="nav-link">博客</a>
+                <a href="#" class="nav-link">问答</a>
+                <a href="#" class="nav-link">学习</a>
+            </div>
+        </div>
+    </header>
 
+    <!-- 个人信息区域 -->
+    <section class="profile">
+        <div class="profile-container">
+            <div class="avatar">
+                <img src="images/avatar.jpg" alt="个人头像">
+            </div>
+            <div class="profile-info">
+                <h1 class="username">前端开发笔记</h1>
+                <p class="desc">专注前端开发 | HTML/CSS/JavaScript | 持续学习</p>
+                <div class="profile-stats">
+                    <span><i class="fa fa-user"></i> 粉丝：1200</span>
+                    <span><i class="fa fa-book"></i> 文章：89</span>
+                    <span><i class="fa fa-star"></i> 获赞：3500</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 文章列表区域 -->
+    <section class="article-list">
+        <div class="container">
+            <h2 class="title">我的文章</h2>
+            <ul class="list">
+                <li class="article-item">
+                    <a href="article.html" class="article-title">CSS实现圣杯布局和双飞翼布局的详细教程</a>
+                    <p class="article-desc">圣杯布局和双飞翼布局是前端经典的布局方式，本文详细讲解两种布局的实现思路和代码...</p>
+                    <div class="article-meta">
+                        <span>发布时间：2025-01-15</span>
+                        <span>阅读量：2580</span>
+                        <span>点赞：128</span>
+                    </div>
+                </li>
+                <li class="article-item">
+                    <a href="article.html" class="article-title">JavaScript异步编程：Promise/async/await全解析</a>
+                    <p class="article-desc">从回调地狱到Promise，再到async/await，一文搞懂JavaScript异步编程的演进...</p>
+                    <div class="article-meta">
+                        <span>发布时间：2025-01-10</span>
+                        <span>阅读量：3200</span>
+                        <span>点赞：189</span>
+                    </div>
+                </li>
+                <li class="article-item">
+                    <a href="article.html" class="article-title">HTML5新特性详解：语义化标签与表单增强</a>
+                    <p class="article-desc">HTML5带来了大量新特性，本文重点讲解语义化标签的使用场景和表单的增强功能...</p>
+                    <div class="article-meta">
+                        <span>发布时间：2025-01-05</span>
+                        <span>阅读量：1890</span>
+                        <span>点赞：98</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 前端开发笔记 - CSDN个人主页</p>
+        </div>
+    </footer>
+</body>
+</html>
