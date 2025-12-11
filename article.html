@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS实现圣杯布局和双飞翼布局 - CSDN博客</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/csdn-logo.png" alt="CSDN图标">
+                <span>CSDN</span>
+            </div>
+            <div class="nav-right">
+                <a href="#" class="nav-link">首页</a>
+                <a href="#" class="nav-link">博客</a>
+                <a href="#" class="nav-link">问答</a>
+                <a href="#" class="nav-link">学习</a>
+            </div>
+        </div>
+    </header>
 
+    <!-- 文章详情区域 -->
+    <section class="article-detail">
+        <div class="container">
+            <!-- 文章头部 -->
+            <div class="article-header">
+                <h1 class="article-main-title">CSS实现圣杯布局和双飞翼布局的详细教程</h1>
+                <div class="article-info">
+                    <span>作者：<a href="index.html">前端开发笔记</a></span>
+                    <span>发布时间：2025-01-15</span>
+                    <span>阅读量：2580</span>
+                    <span>点赞：128</span>
+                </div>
+            </div>
+
+            <!-- 文章内容 -->
+            <div class="article-content">
+                <p>### 一、圣杯布局介绍</p>
+                <p>圣杯布局（Holy Grail Layout）是一种经典的三列布局，特点是：</p>
+                <ul>
+                    <li>左右两列宽度固定，中间列宽度自适应</li>
+                    <li>中间列优先加载（DOM结构中中间列在前）</li>
+                    <li>三列等高（可选）</li>
+                </ul>
+                <p>### 二、圣杯布局实现步骤</p>
+                <p>1. 搭建基本HTML结构：</p>
+                <pre>
+&lt;div class="container"&gt;
+    &lt;div class="middle"&gt;中间列&lt;/div&gt;
+    &lt;div class="left"&gt;左列&lt;/div&gt;
+    &lt;div class="right"&gt;右列&lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+                <p>2. 核心CSS代码：</p>
+                <pre>
+.container {
+    padding: 0 200px; /* 为左右列预留空间 */
+    overflow: hidden;
+}
+.middle {
+    float: left;
+    width: 100%;
+    background: #fff;
+}
+.left {
+    float: left;
+    width: 200px;
+    margin-left: -100%;
+    position: relative;
+    left: -200px;
+    background: #eee;
+}
+.right {
+    float: left;
+    width: 200px;
+    margin-left: -200px;
+    position: relative;
+    right: -200px;
+    background: #eee;
+}
+                </pre>
+                <p>### 三、双飞翼布局</p>
+                <p>双飞翼布局是对圣杯布局的优化，解决了圣杯布局中相对定位的问题，核心是给中间列增加一个内层容器：</p>
+                <pre>
+&lt;div class="container"&gt;
+    &lt;div class="middle"&gt;
+        &lt;div class="middle-inner"&gt;中间列&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="left"&gt;左列&lt;/div&gt;
+    &lt;div class="right"&gt;右列&lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+                <p>### 四、总结</p>
+                <p>圣杯布局和双飞翼布局都是实现三列自适应布局的优秀方案，双飞翼布局无需使用相对定位，兼容性更优，推荐在实际开发中使用。</p>
+            </div>
+
+            <!-- 回到主页按钮 -->
+            <div class="back-home">
+                <a href="index.html"><i class="fa fa-arrow-left"></i> 回到个人主页</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 前端开发笔记 - CSDN个人主页</p>
+        </div>
+    </footer>
+</body>
+</html>
